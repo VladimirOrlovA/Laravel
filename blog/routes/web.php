@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('foo', function () {
+    return 'Hello World';
+});
+
+Route::get('shag', function () {
+    return '<h1>Shag --  send method is GET </h1>';
+});
