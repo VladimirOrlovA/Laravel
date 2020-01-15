@@ -19,6 +19,7 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        //
+        // '/post' // исключение только для view post
+        '*' // исключение для всех запросов
     ];
 }

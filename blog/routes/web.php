@@ -19,6 +19,22 @@ Route::get('foo', function () {
     return 'Hello World';
 });
 
-Route::get('shag', function () {
-    return '<h1>Shag --  send method is GET </h1>';
+Route::get('get', function () {
+    return '<h1>Get --  send method is GET </h1>';
 });
+
+Route::post('post', function () {
+    return '<h1>Post --  send method is POST </h1>';
+});
+
+Route::match(['GET', 'POST'], 'test', function () {
+    return '<h1>TEST --  send method is POST/GET </h1>';
+});
+
+Route::any('any', function () {
+    return '<h1>ANY --  send method is Any methods  </h1>';
+});
+
+Route::get('form', 'ShagController@form');
+
+Route::post('show', 'ShagController@show1');
